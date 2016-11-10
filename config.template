@@ -1,0 +1,3 @@
+[Paths]
+pathtobin = /path/to/bin
+mycwd = /home/<username>
