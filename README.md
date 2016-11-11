@@ -16,7 +16,9 @@ The test shell command *test/riddles* will issue:
 
 *21 buy "http://[::]:9999/test" --data '{"options" : "riddles"}'*
 
-This will pass */usr/games/fortune riddles* to the shell via 21 buy.  (The riddles database is available on most Linux systems by default; if produces an error, try passing "literature".)
+This will pass "riddles" to two1test-server.py, which will look in config.ini for the value of _pathtobin_, then issue *fortune riddles*.  (The riddles database is available on most Linux systems by default; if this produces an error, try passing "literature".)
+
+This method of passing options is very flexible but there is a security issue which is addressed by using shlex.quotes() to escape the options string.
 
 
 
